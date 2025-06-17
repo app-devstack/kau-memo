@@ -5,20 +5,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Commands
-- `yarn build` - Build all packages (workspaces)
-- `yarn test` - Run tests using Vitest
-- `yarn test:watch` - Run tests in watch mode
+- `bun build` - Build all packages (workspaces)
+- `bun test` - Run tests using Vitest
+- `bun test:watch` - Run tests in watch mode
 
 ### Native App (Expo)
-- `yarn native` - Start Expo dev server
-- `yarn ios` - Run on iOS simulator
-- `yarn android` - Run on Android emulator
-- `yarn native:prebuild` - Prebuild native code
+- `bun native` - Start Expo dev server
+- `bun ios` - Run on iOS simulator
+- `bun android` - Run on Android emulator
+- `bun native:prebuild` - Prebuild native code
 
 ### Web App (Next.js)
-- `yarn web` - Build and run Next.js production server
-- `yarn web:prod` - Build Next.js for production
-- `yarn web:prod:serve` - Serve production build
+- `bun web` - Build and run Next.js production server
+- `bun web:prod` - Build Next.js for production
+- `bun web:prod:serve` - Serve production build
 
 ### Code Quality
 - Code formatting and linting is handled by Biome (see biome.json)
@@ -32,7 +32,7 @@ This is a **monorepo** built with Tamagui that supports both React Native (Expo)
 ### Workspace Structure
 - **Root**: Yarn workspaces configuration with Turbo for build orchestration
 - **apps/expo/**: React Native mobile app using Expo
-- **apps/next/**: Next.js web app with both App Router and Pages Router examples  
+- **apps/next/**: Next.js web app with both App Router and Pages Router examples
 - **packages/app/**: Shared React components and screens
 - **packages/ui/**: Shared UI component library built with Tamagui
 - **packages/config/**: Tamagui configuration and theme setup
@@ -44,7 +44,7 @@ This is a **monorepo** built with Tamagui that supports both React Native (Expo)
 - **Build System**: Turbo monorepo
 - **Testing**: Vitest
 - **Code Quality**: Biome (formatting, linting)
-- **Package Manager**: Yarn 4.5.0 (Node 22 required)
+- **Package Manager**: Bun 1.0.0 (Node 22 required)
 
 ### Application Domain
 This is a Japanese shopping list management app called "かうめも" (kau-memo) with Animal Crossing-style gamification features. The app allows families/groups to:
@@ -67,7 +67,7 @@ This is a Japanese shopping list management app called "かうめも" (kau-memo)
 
 When working with this codebase:
 1. Changes to shared UI components go in packages/ui/
-2. Cross-platform screens go in packages/app/features/  
+2. Cross-platform screens go in packages/app/features/
 3. Platform-specific code goes in respective apps/ directories
 4. Always test both web and native platforms when making shared changes
 5. Follow the gamification principles - avoid excessive purchase promotion
