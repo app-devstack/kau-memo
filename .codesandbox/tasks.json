@@ -3,7 +3,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "yarn install"
+      "command": "bun install"
     }
   ],
 
@@ -11,11 +11,11 @@
   "tasks": {
     "install": {
       "name": "install dependencies",
-      "command": "yarn install"
+      "command": "bun install"
     },
     "Development": {
       "name": "Development",
-      "command": "yarn web",
+      "command": "bun web",
       "runAtStart": true,
       "preview": {
         "port": 3000

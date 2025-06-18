@@ -30,7 +30,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a **monorepo** built with Tamagui that supports both React Native (Expo) and Next.js web applications.
 
 ### Workspace Structure
-- **Root**: Yarn workspaces configuration with Turbo for build orchestration
+- **Root**: bun workspaces configuration with Turbo for build orchestration
 - **apps/expo/**: React Native mobile app using Expo
 - **apps/next/**: Next.js web app with both App Router and Pages Router examples
 - **packages/app/**: Shared React components and screens

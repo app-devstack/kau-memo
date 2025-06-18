@@ -14,7 +14,7 @@ error: failed to push some refs to 'https://github.com/app-devstack/kau-memo.git
 1. **Node.jsバージョン不一致**: プロジェクトでNode.js 22が必要だが、Node.js 24.2.0を使用していた
 2. **Pre-pushフックでのテスト実行**: Huskyがpush前にテストを実行し、Node.jsバージョンエラーで失敗
 3. **依存関係の不整合**: Node.jsバージョン変更後の依存関係の再構築が必要
-4. **テストコマンドの不一致**: Huskyで`yarn test`を使用していたが、プロジェクトは`bun`ベース
+4. **テストコマンドの不一致**: Huskyで`bun test`を使用していたが、プロジェクトは`bun`ベース
 
 ## 解決手順
 
@@ -63,7 +63,7 @@ bun install
 ```bash
 # pre-pushフック設定を確認
 cat .husky/pre-push
-# -> yarn test (問題のコマンド)
+# -> bun test (問題のコマンド)
 
 # bunコマンドに変更
 echo "bun test" > .husky/pre-push
